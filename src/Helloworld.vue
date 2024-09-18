@@ -3,7 +3,7 @@
   <input type="text" v-model="num" />
   <div>{{ arr }}</div>
   <div>{{ obj }}</div>
-  <div>{{ fullName }}</div>
+  <div>computed: {{ fullName }}</div>
   <div>
     v-if:
     <span v-if="number > 10">1</span>
