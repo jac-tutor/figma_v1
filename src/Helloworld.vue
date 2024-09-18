@@ -1,6 +1,6 @@
 <template>
   <div>helloworld {{ num }}</div>
-  <input type="text" v-model="num" />
+  <input type="text" v-model="num" @focus="onFocus" @blur="onBlur" />
   <div>{{ arr }}</div>
   <div>{{ obj }}</div>
   <div>computed: {{ fullName }}</div>
@@ -13,6 +13,7 @@
   <div v-for="item in 5">{{ item }}</div>
   <div v-for="(item, index) in 5">{{ item }} - {{ index }}</div>
   <div v-for="(item, index) in arr">{{ item }} - {{ index }}</div>
+  <div><button type="button" @click="onClick()">good</button></div>
 </template>
 
 <script setup lang="ts">
@@ -35,4 +36,14 @@ watch(num, function () {
 
 // if (true) {}
 const number = ref(10)
+
+const onClick = () => {
+  console.log("onClick")
+}
+const onFocus = () => {
+  console.log("onFocus")
+}
+const onBlur = () => {
+  console.log("onBlur")
+}
 </script>
