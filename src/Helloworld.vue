@@ -10,6 +10,9 @@
     <span v-else-if="number < 10">-1</span>
     <span v-else>0</span>
   </div>
+  <div v-for="item in 5">{{ item }}</div>
+  <div v-for="(item, index) in 5">{{ item }} - {{ index }}</div>
+  <div v-for="(item, index) in arr">{{ item }} - {{ index }}</div>
 </template>
 
 <script setup lang="ts">
