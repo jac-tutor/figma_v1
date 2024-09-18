@@ -1,7 +1,7 @@
 <template>
   <div>helloworld {{ num }}</div>
   <input
-    type="text"
+    :type="inputType"
     v-model="num"
     @keypress.enter="
       () => {
@@ -49,6 +49,7 @@ const number = ref(10)
 
 const onClick = () => {
   console.log("onClick")
+  inputType.value = inputType.value === "text" ? "password" : "text"
 }
 const onFocus = () => {
   console.log("onFocus")
@@ -56,4 +57,5 @@ const onFocus = () => {
 const onBlur = () => {
   console.log("onBlur")
 }
+const inputType = ref("text")
 </script>
