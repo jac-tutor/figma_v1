@@ -5,6 +5,7 @@ import { createApp } from "vue"
 
 // import App from './App.vue'
 // import router from './router'
+// component
 import HelloWorld from "./Helloworld.vue"
 const app = createApp(HelloWorld)
 
