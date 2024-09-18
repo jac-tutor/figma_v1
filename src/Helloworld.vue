@@ -24,7 +24,7 @@
   <div v-for="(item, index) in 5">{{ item }} - {{ index }}</div>
   <div v-for="(item, index) in arr">{{ item }} - {{ index }}</div>
   <div><button type="button" @click="onClick()">good</button></div>
-  <MyComponent />
+  <MyComponent v-for="item in 3" :num="item" />
 </template>
 
 <script setup lang="ts">
