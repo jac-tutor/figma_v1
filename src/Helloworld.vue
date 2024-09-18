@@ -24,10 +24,12 @@
   <div v-for="(item, index) in 5">{{ item }} - {{ index }}</div>
   <div v-for="(item, index) in arr">{{ item }} - {{ index }}</div>
   <div><button type="button" @click="onClick()">good</button></div>
+  <MyComponent />
 </template>
 
 <script setup lang="ts">
 import { computed, reactive, ref, watch } from "vue"
+import MyComponent from "./MyComponent.vue"
 
 const num = ref("haha")
 num.value = "cc"
