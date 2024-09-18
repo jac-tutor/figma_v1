@@ -1,6 +1,16 @@
 <template>
   <div>helloworld {{ num }}</div>
-  <input type="text" v-model="num" @focus="onFocus" @blur="onBlur" />
+  <input
+    type="text"
+    v-model="num"
+    @keypress.enter="
+      () => {
+        console.log('enter pressed')
+      }
+    "
+    @focus="onFocus"
+    @blur="onBlur"
+  />
   <div>{{ arr }}</div>
   <div>{{ obj }}</div>
   <div>computed: {{ fullName }}</div>
@@ -30,9 +40,9 @@ obj.a = "A"
 obj.firstName = "Jac"
 obj.lastName = "Wang"
 const fullName = computed(() => `${obj.firstName} ${obj.lastName}`)
-watch(num, function () {
-  console.log(num.value)
-})
+// watch(num, function () {
+//   console.log(num.value)
+// })
 
 // if (true) {}
 const number = ref(10)
