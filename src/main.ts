@@ -8,8 +8,10 @@ import { createApp } from "vue"
 // component
 // import HelloWorld from "./Helloworld.vue"
 // import Jay from "./Jay.vue"
-import TodoList from "./TodoList.vue"
-const app = createApp(TodoList)
+// import TodoList from "./TodoList.vue"
+import Swiper from "./Swiper.vue"
+// import Multiplication from "./Multiplication.vue"
+const app = createApp(Swiper)
 
 // app.use(createPinia())
 // app.use(router)
