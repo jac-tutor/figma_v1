@@ -8,18 +8,22 @@
       <table class="w-full">
         <tr>
           <th>Todo</th>
-          <th>Finished</th>
+          <!-- <th>Finished</th> -->
         </tr>
         <tr>
           <td>
-            <div class="text-center" @click="item.finished = true" v-for="item in todoList">
+            <!-- <div class="text-center" @click="item.finished = true" v-for="item in todoList">
               {{ item.title }}
+            </div> -->
+            <div class="text-center" v-for="item in list">
+              <del @click="item.finished = false" v-if="item.finished">{{ item.title }}</del>
+              <span @click="item.finished = true" v-else>{{ item.title }}</span>
             </div>
           </td>
           <td>
-            <div class="text-center" @click="item.finished = false" v-for="item in finishedList">
+            <!-- <div class="text-center" @click="item.finished = false" v-for="item in finishedList">
               {{ item.title }}
-            </div>
+            </div> -->
           </td>
         </tr>
       </table>
