@@ -46,7 +46,9 @@
         <div>(組織成員)</div>
         <div>©2024</div>
       </div>
-      <div class="flex flex-wrap">
+      <div class="flex flex-wrap relative">
+        <Spline class="absolute -top-[650px] -left-[380px] scale-[0.3]" scene="https://prod.spline.design/kBSjj7-hTG4uk-M4/scene.splinecode" />
+
         <Member v-for="member in members" :avatar="member.avatar" :name="member.name" :desc="member.desc" />
       </div>
       <div class="flex justify-between mt-[200px]">
@@ -91,6 +93,7 @@
 <script setup lang="ts">
 import { reactive } from "vue"
 import Member from "./Member.vue"
+import Spline from "spline-vue/v3"
 
 const members = reactive([
   {
