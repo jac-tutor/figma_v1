@@ -2,6 +2,7 @@
   <div>helloworld {{ num }}</div>
   <input
     :type="inputType"
+    class="text-black"
     v-model="num"
     @keypress.enter="
       () => {
@@ -24,7 +25,15 @@
   <div v-for="(item, index) in 5">{{ item }} - {{ index }}</div>
   <div v-for="(item, index) in arr">{{ item }} - {{ index }}</div>
   <div><button type="button" @click="onClick()">good</button></div>
-  <MyComponent v-for="item in 3" :num="item" />
+  <MyComponent
+    v-for="item in 3"
+    :num="item"
+    @click="
+      (num) => {
+        console.log(num)
+      }
+    "
+  />
 </template>
 
 <script setup lang="ts">
@@ -33,7 +42,7 @@ import MyComponent from "./MyComponent.vue"
 
 const num = ref("haha")
 num.value = "cc"
-const arr = reactive<number[]>([])
+const arr = reactive<number[]>([]) // {} []
 arr.push(1)
 arr.push(23)
 arr.push(5657)

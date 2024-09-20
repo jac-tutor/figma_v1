@@ -1,4 +1,4 @@
-import "./assets/main.css"
+// import "./assets/main.css"
 
 import { createApp } from "vue"
 // import { createPinia } from 'pinia'
@@ -6,8 +6,9 @@ import { createApp } from "vue"
 // import App from './App.vue'
 // import router from './router'
 // component
-import HelloWorld from "./Helloworld.vue"
-const app = createApp(HelloWorld)
+// import HelloWorld from "./Helloworld.vue"
+import Jay from "./Jay.vue"
+const app = createApp(Jay)
 
 // app.use(createPinia())
 // app.use(router)
