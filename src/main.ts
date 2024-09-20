@@ -7,8 +7,9 @@ import { createApp } from "vue"
 // import router from './router'
 // component
 // import HelloWorld from "./Helloworld.vue"
-import Jay from "./Jay.vue"
-const app = createApp(Jay)
+// import Jay from "./Jay.vue"
+import TodoList from "./TodoList.vue"
+const app = createApp(TodoList)
 
 // app.use(createPinia())
 // app.use(router)
